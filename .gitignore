@@ -1,0 +1,6 @@
+*.txt
+benchmark-branch
+benchmark-core
+benchmark-thrash
+benchmark-thrash2
+lcg-test

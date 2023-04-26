@@ -133,6 +133,12 @@ main (int argc, char *argv[])
                        &wall_clock_time_usec,
                        &snap_start, &snap_end);
 
+    printf("case_number \
+            wall_clock_time_usec \
+            user_time_usec \
+            sys_time_usec \
+            sum \
+            \n");
     printf("2 %lu %lu %lu %d\n",
            wall_clock_time_usec,
            user_time_usec,

@@ -177,6 +177,16 @@ main(int argc, char *argv[])
         exit(1);
     }
 
+    printf("array_len "
+           "stride "
+           "num_passes "
+           "wall_clock_time_usec "
+           "user_time_usec "
+           "sys_time_usec "
+           "sum "
+           "sizeof_int "
+           "\n");
+
     for (array_len = 512; array_len <= max_array_len; array_len <<= 1) {
         num_passes = (1 << 27) / array_len;
         for (i = 0; i < array_len; i++) {
@@ -192,6 +202,7 @@ main(int argc, char *argv[])
         time_snapshot_diff(&user_time_usec, &sys_time_usec,
                            &wall_clock_time_usec,
                            &snap1, &snap2);
+
         printf("%d %d %d %lu %lu %lu %d sizeof(int)=%lu\n",
                array_len, stride, num_passes,
                wall_clock_time_usec,
