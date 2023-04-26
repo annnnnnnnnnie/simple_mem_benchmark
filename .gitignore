@@ -1,4 +1,5 @@
 *.txt
+/build/
 benchmark-branch
 benchmark-core
 benchmark-thrash
